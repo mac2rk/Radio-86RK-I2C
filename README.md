@@ -8,7 +8,7 @@
 
 ## Introduction
 
-This project is an I2C interface for i8080/i8085/Z80-based computers. The interface is bulit around NXP's PCF8584. The PCB is size- and pin-compatible with the Programmable Peripheral Interface and can be plugged into i8255's socket (of course it requires different code to setup and run). A code example is provided.
+This project is an I2C interface for i8080/i8085/Z80-based computers. The interface is bulit around NXP's PCF8584 I2C bus controller. The PCB is size- and pin-compatible with the i8255 Programmable Peripheral Interface and can be plugged into i8255's socket (of course it requires different code to setup and run). A code example is provided.
 
 ## Schematic
 
