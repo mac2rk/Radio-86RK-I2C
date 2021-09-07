@@ -12,13 +12,13 @@ This project is an I2C interface for i8080/i8085/Z80-based computers. The interf
 
 ## Schematic
 
-[Schematic](Eagle/Radio-86RK-I2C-schematic.pdf)
+[Schematic](Eagle/Radio86RK-I2C-schematic.pdf)
 
 The schematic follows the datasheet for the PCF8584. 
 
 ## PCB layout 
 
-[PCB layout](Eagle/Radio-86RK-I2C-pcb.pdf)
+[PCB layout](Eagle/Radio86RK-I2C-pcb.pdf)
 
 Note that all parts, with the possible exception of the 4-pin I2C header, are on the underside of the PCB.
 
