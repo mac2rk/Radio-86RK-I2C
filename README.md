@@ -93,22 +93,22 @@ Intel 8080 assembler. The code assumes that the PCF8584 I/O ports are mapped to 
                 STA     PCF_CTRL        ; transmit address + R/W bit
     TX10:
     ; wait for the transmission to finish
-                LDA     PCF_CTRL        ; poll for transmission finished
+                LDA     PCF_CTRL        ; load status byte
                 MOV     B, A            ; store status byte to check for acknowledgement later
                 ANI     PCF_PIN         ; is transmission complete?
-                JNZ     TX10            ; not complete, keep waiting
+                JNZ     TX10            ; keep polling if not complete
                 MOV     A, B
     ; check if the slave acknowledged the address
                 ANI     PCF_LRB         ; slave acknowledged?
-                JNZ     TXSTOP          ; JIF not acknowledged - maybe the slave is busy or not present at that address
+                JNZ     TXSTOP          ; JIF not acknowledged; maybe the slave is busy or not present at that address
     ; slave acknowledged the address, so send the data
                 MVI     A, DATA_BYTE    ; byte to be transferred
                 STA     PCF_DATA        ; send the data byte to the slave
     TX20:
     ; wait for the transmission to finish
-                LDA     PCF_CTRL        ; poll for transmission finished
-                ANI     PCF_PIN
-                JNZ     TX20            ; JIF not finished
+                LDA     PCF_CTRL        ; load status byte
+                ANI     PCF_PIN         ; is transmission complete?
+                JNZ     TX20            ; keep polling if not complete
     ; here one can check for acknowledgement and send the next byte, etc.
     TXSTOP:
     ; generate STOP condition on the I2C bus
