@@ -94,7 +94,7 @@ Intel 8080 assembler. The code assumes that the PCF8584 I/O ports are mapped to 
     TX10:
     ; wait for the transmission to finish
                 LDA     PCF_CTRL        ; poll for transmission finished
-                MOV     B, A            ; store status byte for the later chack for acknowledgement
+                MOV     B, A            ; store status byte to check for acknowledgement later
                 ANI     PCF_PIN         ; is transmission complete?
                 JNZ     TX10            ; not complete, keep waiting
                 MOV     A, B
