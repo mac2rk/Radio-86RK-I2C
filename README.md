@@ -34,7 +34,7 @@ U2    | I2C-bus controller | PCF8584T | S020   | 1
 U3    | Signle NAND gate | 741G00DBV | SOT23-5 | 1
 U4    | Oscillator         | 12MHz   | 5x7mm   | 1
 R1,R2 | Resistor           | 4.7kOhm | 0805    | 2
-I2C   | 0.1" pin header    |         | 1x4     | 1
+C1,C2 | Capacitor          | 0.1uF   | 0805    | 2
 I2C   | 0.1" pin header    |         | 1x4     | 1
 
 ## Example code
