@@ -38,7 +38,7 @@ I2C   | 0.1" pin header    |         | 1x4     | 1
 
 ## Example code
 
-Intel 8080 assembler. The code assumes that the PCF8584 I/O ports are mapped to memory addresses 0A000h (data port) and 0A001h (control port). 
+Intel 8080 assembler - can be compiled with e.g. [asm8080](https://github.com/mac2rk/asm8080). The code assumes that the PCF8584 I/O ports are mapped to memory addresses 0A000h (data port) and 0A001h (control port). 
 
     ; PCF8584 use example
     ; 
